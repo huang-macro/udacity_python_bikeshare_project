@@ -6,10 +6,12 @@ import datetime as dt
 ###########################################################################
 ###########################################################################
 ###########################################################################
-## Some global variables
+## The datasets to select from
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
+
+# Additional global variables for selection
 cities = CITY_DATA.keys()
 months = ['All', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
 weekdays = ['All', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
