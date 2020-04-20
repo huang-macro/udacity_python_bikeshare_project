@@ -234,6 +234,20 @@ def main():
         city, month, weekday = get_filters()
         df = load_data(city, month, weekday)
 
+       ## Show raw data if the user wishes to see them
+        q0 = input("\nWould you like to see a few lines of the data? (Enter yes or no.)\n")
+        if q0.lower() == 'yes':
+            i = 0
+            print(df[i:(i+5)])
+            while i <= (df.shape[0]-5):
+                q0a = input("\n would you like to see more? (Enter yes or no)")
+                if q0a.lower() == 'yes':
+                    i += 5
+                    print(df[i:(i+5)])
+                else: 
+                    break
+
+        ## Statistic summaries of the data
         q1 = input("\nWould you like to see the most common date/time of travel? (Enter yes or no.)\n")
         if q1.lower() == 'yes':
             time_stats(df)
